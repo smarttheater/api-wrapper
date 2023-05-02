@@ -1,0 +1,1580 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Smart Theater API Wrapper Documentation</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><style>@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Inconsolata|Raleway:200');@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,700|Source+Code+Pro');.hljs-comment,.hljs-title{color:#8e908c}.hljs-variable,.hljs-attribute,.hljs-tag,.hljs-regexp,.ruby .hljs-constant,.xml .hljs-tag .hljs-title,.xml .hljs-pi,.xml .hljs-doctype,.html .hljs-doctype,.css .hljs-id,.css .hljs-class,.css .hljs-pseudo{color:#c82829}.hljs-number,.hljs-preprocessor,.hljs-pragma,.hljs-built_in,.hljs-literal,.hljs-params,.hljs-constant{color:#f5871f}.ruby .hljs-class .hljs-title,.css .hljs-rules .hljs-attribute{color:#eab700}.hljs-string,.hljs-value,.hljs-inheritance,.hljs-header,.ruby .hljs-symbol,.xml .hljs-cdata{color:#718c00}.css .hljs-hexcolor{color:#3e999f}.hljs-function,.python .hljs-decorator,.python .hljs-title,.ruby .hljs-function .hljs-title,.ruby .hljs-title .hljs-keyword,.perl .hljs-sub,.javascript .hljs-title,.coffeescript .hljs-title{color:#4271ae}.hljs-keyword,.javascript .hljs-function{color:#8959a8}.hljs{display:block;background:white;color:#4d4d4c;padding:.5em}.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata{opacity:.5}.right .hljs-comment{color:#969896}.right .css .hljs-class,.right .css .hljs-id,.right .css .hljs-pseudo,.right .hljs-attribute,.right .hljs-regexp,.right .hljs-tag,.right .hljs-variable,.right .html .hljs-doctype,.right .ruby .hljs-constant,.right .xml .hljs-doctype,.right .xml .hljs-pi,.right .xml .hljs-tag .hljs-title{color:#c66}.right .hljs-built_in,.right .hljs-constant,.right .hljs-literal,.right .hljs-number,.right .hljs-params,.right .hljs-pragma,.right .hljs-preprocessor{color:#de935f}.right .css .hljs-rule .hljs-attribute,.right .ruby .hljs-class .hljs-title{color:#f0c674}.right .hljs-header,.right .hljs-inheritance,.right .hljs-name,.right .hljs-string,.right .hljs-value,.right .ruby .hljs-symbol,.right .xml .hljs-cdata{color:#b5bd68}.right .css .hljs-hexcolor,.right .hljs-title{color:#8abeb7}.right .coffeescript .hljs-title,.right .hljs-function,.right .javascript .hljs-title,.right .perl .hljs-sub,.right .python .hljs-decorator,.right .python .hljs-title,.right .ruby .hljs-function .hljs-title,.right .ruby .hljs-title .hljs-keyword{color:#81a2be}.right .hljs-keyword,.right .javascript .hljs-function{color:#b294bb}.right .hljs{display:block;overflow-x:auto;background:#1d1f21;color:#c5c8c6;padding:.5em;-webkit-text-size-adjust:none}.right .coffeescript .javascript,.right .javascript .xml,.right .tex .hljs-formula,.right .xml .css,.right .xml .hljs-cdata,.right .xml .javascript,.right .xml .vbscript{opacity:.5}.hljs-comment{color:#969896}.css .hljs-class,.css .hljs-id,.css .hljs-pseudo,.hljs-attribute,.hljs-regexp,.hljs-tag,.hljs-variable,.html .hljs-doctype,.ruby .hljs-constant,.xml .hljs-doctype,.xml .hljs-pi,.xml .hljs-tag .hljs-title{color:#77A619}.hljs-literal{color:#A69819}.hljs-built_in,.hljs-constant,.hljs-number,.hljs-params,.hljs-pragma,.hljs-preprocessor{color:#1B88B3}.css .hljs-rule .hljs-attribute,.ruby .hljs-class .hljs-title{color:#A37518}.hljs-header,.hljs-inheritance,.hljs-name,.hljs-string,.hljs-value,.ruby .hljs-symbol,.xml .hljs-cdata{color:inherit}.coffeescript .hljs-title,.css .hljs-hexcolor,.hljs-function,.hljs-title,.javascript .hljs-title,.perl .hljs-sub,.python .hljs-decorator,.python .hljs-title,.ruby .hljs-function .hljs-title,.ruby .hljs-title .hljs-keyword{color:#A63A4A}.hljs-keyword,.javascript .hljs-function{color:#A69819}.hljs{display:block;overflow-x:auto;background:#1d1f21;color:#c5c8c6;padding:.5em;-webkit-text-size-adjust:none}.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .css,.xml .hljs-cdata,.xml .javascript,.xml .vbscript{opacity:.5}.right .hljs-comment{color:#969896}.right .css .hljs-class,.right .css .hljs-id,.right .css .hljs-pseudo,.right .hljs-attribute,.right .hljs-regexp,.right .hljs-tag,.right .hljs-variable,.right .html .hljs-doctype,.right .ruby .hljs-constant,.right .xml .hljs-doctype,.right .xml .hljs-pi,.right .xml .hljs-tag .hljs-title{color:#C1EF65}.right .hljs-literal{color:#EBDE68}.right .hljs-built_in,.right .hljs-constant,.right .hljs-number,.right .hljs-params,.right .hljs-pragma,.right .hljs-preprocessor{color:#77BCD7}.right .css .hljs-rule .hljs-attribute,.right .ruby .hljs-class .hljs-title{color:#f0c674}.right .hljs-header,.right .hljs-inheritance,.right .hljs-name,.right .hljs-string,.right .hljs-value,.right .ruby .hljs-symbol,.right .xml .hljs-cdata{color:inherit}.right .coffeescript .hljs-title,.right .css .hljs-hexcolor,.right .hljs-function,.right .hljs-title,.right .javascript .hljs-title,.right .perl .hljs-sub,.right .python .hljs-decorator,.right .python .hljs-title,.right .ruby .hljs-function .hljs-title,.right .ruby .hljs-title .hljs-keyword{color:#f099a6}.right .hljs-keyword,.right .javascript .hljs-function{color:#EBDE68}.right .hljs{display:block;overflow-x:auto;background:#1d1f21;color:#c5c8c6;padding:.5em;-webkit-text-size-adjust:none}.right .coffeescript .javascript,.right .javascript .xml,.right .tex .hljs-formula,.right .xml .css,.right .xml .hljs-cdata,.right .xml .javascript,.right .xml .vbscript{opacity:.5}body{color:#4c555a;background:white;font:400 14px / 1.42 'Roboto',Helvetica,sans-serif}header{border-bottom:1px solid transparent;margin-bottom:12px}h1,h2,h3,h4,h5{color:#292e31;margin:12px 0}h1 .permalink,h2 .permalink,h3 .permalink,h4 .permalink,h5 .permalink{margin-left:0;opacity:0;transition:opacity .25s ease}h1:hover .permalink,h2:hover .permalink,h3:hover .permalink,h4:hover .permalink,h5:hover .permalink{opacity:1}.triple h1 .permalink,.triple h2 .permalink,.triple h3 .permalink,.triple h4 .permalink,.triple h5 .permalink{opacity:.15}.triple h1:hover .permalink,.triple h2:hover .permalink,.triple h3:hover .permalink,.triple h4:hover .permalink,.triple h5:hover .permalink{opacity:.15}h1{font:100 36px 'Roboto',Helvetica,sans-serif;font-size:36px}h2{font:100 36px 'Roboto',Helvetica,sans-serif;font-size:30px}h3{font-size:100%;text-transform:uppercase}h5{font-size:100%;font-weight:normal}p{margin:0 0 10px}p.choices{line-height:1.6}a{color:#0099e5;text-decoration:none}li p{margin:0}hr.split{border:0;height:1px;width:100%;padding-left:6px;margin:12px auto;background-image:linear-gradient(to right, rgba(76,85,90,0) 20%, rgba(76,85,90,0.2) 48%, rgba(221,228,232,0.2) 48%, rgba(221,228,232,0) 80%)}dl dt{float:left;width:130px;clear:left;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}dl dd{margin-left:150px}blockquote{color:rgba(76,85,90,0.5);font-size:15.5px;padding:10px 20px;margin:12px 0;border-left:5px solid #e8e8e8}blockquote p:last-child{margin-bottom:0}pre{background-color:#f5f5f5;padding:12px;border:1px solid #cfcfcf;border-radius:3px;overflow:auto}pre code{color:#4c555a;background-color:transparent;padding:0;border:none}code{color:#b93d6a;background-color:#f5f5f5;font:13px / 19.5px 'Source Code Pro',Menlo,monospace;padding:1px 4px;border:1px solid #cfcfcf;border-radius:3px}ul,ol{padding-left:2em}table{border-collapse:collapse;border-spacing:0;margin-bottom:12px}table tr:nth-child(2n){background-color:#fafafa}table th,table td{padding:6px 12px;border:1px solid #e6e6e6}.text-muted{opacity:.5}.note,.warning{padding:.3em 1em;margin:1em 0;border-radius:2px;font-size:90%}.note h1,.warning h1,.note h2,.warning h2,.note h3,.warning h3,.note h4,.warning h4,.note h5,.warning h5,.note h6,.warning h6{font-family:100 36px 'Roboto',Helvetica,sans-serif;font-size:135%;font-weight:500}.note p,.warning p{margin:.5em 0}.note{color:#4c555a;background-color:#ebf7fd;border-left:4px solid #0099e5}.note h1,.note h2,.note h3,.note h4,.note h5,.note h6{color:#0099e5}.warning{color:#4c555a;background-color:#faf0f4;border-left:4px solid #B82E5F}.warning h1,.warning h2,.warning h3,.warning h4,.warning h5,.warning h6{color:#B82E5F}header{margin-top:24px}nav{position:fixed;top:24px;bottom:0;overflow-y:auto}nav .resource-group{padding:0}nav .resource-group .heading{position:relative}nav .resource-group .heading .chevron{position:absolute;top:12px;right:12px;opacity:.5}nav .resource-group .heading a{display:block;color:#4c555a;opacity:.7;border-left:2px solid transparent;margin:0}nav .resource-group .heading a:hover{text-decoration:underline;background-color:transparent;border-left:2px solid transparent}nav ul{list-style-type:none;padding-left:0}nav ul a{display:block;font-size:13px;color:rgba(76,85,90,0.7);padding:8px 12px;border-top:1px solid transparent;border-left:2px solid transparent;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}nav ul a:hover{text-decoration:underline;background-color:transparent;border-left:2px solid transparent}nav ul>li{margin:0}nav ul>li:first-child{margin-top:-12px}nav ul>li:last-child{margin-bottom:-12px}nav ul ul a{padding-left:24px}nav ul ul li{margin:0}nav ul ul li:first-child{margin-top:0}nav ul ul li:last-child{margin-bottom:0}nav>div>div>ul>li:first-child>a{border-top:none}.preload *{transition:none !important}.pull-left{float:left}.pull-right{float:right}.badge{display:inline-block;float:right;min-width:10px;min-height:14px;padding:3px 7px;font-size:12px;color:black;background-color:transparent;border-radius:10px;margin:-2px -8px -2px 0}.badge.get{color:#fff;background-color:#ddf1fc}.badge.head{color:#fff;background-color:#ddf1fc}.badge.options{color:#fff;background-color:#ddf1fc}.badge.put{color:#fff;background-color:#f7f2c3}.badge.patch{color:#fff;background-color:#f7f2c3}.badge.post{color:#fff;background-color:#e4f2c8}.badge.delete{color:#fff;background-color:#f2d8e1}.collapse-button{float:right}.collapse-button .close{display:none;color:#0099e5;cursor:pointer}.collapse-button .open{color:#0099e5;cursor:pointer}.collapse-button.show .close{display:inline}.collapse-button.show .open{display:none}.collapse-content{max-height:0;overflow:hidden;transition:max-height .3s ease-in-out}nav{width:220px}.container{max-width:940px;margin-left:auto;margin-right:auto}.container .row .content{margin-left:244px;width:696px}.container .row:after{content:'';display:block;clear:both}.container-fluid nav{width:22%}.container-fluid .row .content{margin-left:24%}.container-fluid.triple nav{width:15%;padding-right:1px}.container-fluid.triple .row .content{position:relative;margin-left:15%;padding-left:24px}.middle:before,.middle:after{content:'';display:table}.middle:after{clear:both}.middle{box-sizing:border-box;width:48%;padding-right:12px}.right{box-sizing:border-box;float:right;width:52%;padding-left:12px}.right a{color:#0099e5}.right h1,.right h2,.right h3,.right h4,.right h5,.right p,.right div{color:#dde4e8}.right pre{background-color:#272B2D;border:1px solid #272B2D}.right pre code{color:#D0D0D0}.right .description{margin-top:12px}.triple .resource-heading{font-size:125%}.definition{margin-top:12px;margin-bottom:12px}.definition .method{font-weight:bold}.definition .method.get{color:#2e8ab8}.definition .method.head{color:#2e8ab8}.definition .method.options{color:#2e8ab8}.definition .method.post{color:#8ab82e}.definition .method.put{color:#b8aa2e}.definition .method.patch{color:#b8aa2e}.definition .method.delete{color:#b82e5f}.definition .uri{word-break:break-all;word-wrap:break-word}.definition .hostname{opacity:.5}.example-names{background-color:#eee;padding:12px;border-radius:3px}.example-names .tab-button{cursor:pointer;color:#4c555a;border:1px solid #ddd;padding:6px;margin-left:12px}.example-names .tab-button.active{background-color:#d5d5d5}.right .example-names{background-color:#424648}.right .example-names .tab-button{color:#dde4e8;border:1px solid #6C6F71;border-radius:3px}.right .example-names .tab-button.active{background-color:#5a6063}#nav-background{position:fixed;left:0;top:0;bottom:0;width:15%;padding-right:14.4px;background-color:#fafcfc;border-right:1px solid #f0f4f7;z-index:-1}#right-panel-background{position:absolute;right:-12px;top:-12px;bottom:-12px;width:52%;background-color:#2d3134;z-index:-1}@media (max-width:1200px){nav{width:198px}.container{max-width:840px}.container .row .content{margin-left:224px;width:606px}}@media (max-width:992px){nav{width:169.4px}.container{max-width:720px}.container .row .content{margin-left:194px;width:526px}}@media (max-width:768px){nav{display:none}.container{width:95%;max-width:none}.container .row .content,.container-fluid .row .content,.container-fluid.triple .row .content{margin-left:auto;margin-right:auto;width:95%}#nav-background{display:none}#right-panel-background{width:52%}}.back-to-top{position:fixed;z-index:1;bottom:0;right:24px;padding:4px 8px;color:rgba(76,85,90,0.5);background-color:transparent;text-decoration:none !important;border-top:1px solid transparent;border-left:1px solid transparent;border-right:1px solid transparent;border-top-left-radius:3px;border-top-right-radius:3px}.resource-group{padding:12px 12px 12px 0;margin-bottom:12px;background-color:transparent;border:1px solid transparent;border-radius:3px}.resource-group h2.group-heading,.resource-group .heading a{padding:12px 12px 12px 0;margin:0 0 12px 0;background-color:transparent;border-bottom:1px solid transparent;border-top-left-radius:3px;border-top-right-radius:3px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.triple .content .resource-group{padding:0;border:none}.triple .content .resource-group h2.group-heading,.triple .content .resource-group .heading a{margin:0 0 12px 0;border:1px solid transparent}nav .resource-group .heading a{padding:12px;margin-bottom:0}nav .resource-group .collapse-content{padding:0}.action{margin-bottom:12px;padding:12px 12px 0 12px;overflow:hidden;border:1px solid transparent;border-radius:3px}.action h4.action-heading{padding:6px 12px;margin:-12px -12px 12px -12px;border-bottom:1px solid transparent;border-top-left-radius:3px;border-top-right-radius:3px;overflow:hidden}.action h4.action-heading .name{float:right;font-weight:normal;padding:6px 0}.action h4.action-heading .method{padding:6px 12px;margin-right:12px;border-radius:2px;display:inline-block}.action h4.action-heading .method.get{color:#fff;background-color:#0099e5}.action h4.action-heading .method.head{color:#fff;background-color:#0099e5}.action h4.action-heading .method.options{color:#fff;background-color:#0099e5}.action h4.action-heading .method.put{color:#fff;background-color:#b1a74e}.action h4.action-heading .method.patch{color:#fff;background-color:#b1a74e}.action h4.action-heading .method.post{color:#fff;background-color:#85a546}.action h4.action-heading .method.delete{color:#fff;background-color:#c14a74}.action h4.action-heading code{color:#444;background-color:#f5f5f5;border-color:#cfcfcf;font-weight:normal;word-break:break-all;display:inline-block;margin-top:2px}.action dl.inner{padding-bottom:2px}.action .title{border-bottom:1px solid transparent;margin:0 -12px -1px -12px;padding:12px}.action.get{border-color:#ddf1fc}.action.get h4.action-heading{color:#0099e5;background:#ddf1fc;border-bottom-color:#ddf1fc}.action.head{border-color:#ddf1fc}.action.head h4.action-heading{color:#0099e5;background:#ddf1fc;border-bottom-color:#ddf1fc}.action.options{border-color:#ddf1fc}.action.options h4.action-heading{color:#0099e5;background:#ddf1fc;border-bottom-color:#ddf1fc}.action.post{border-color:#e4f2c8}.action.post h4.action-heading{color:#85a546;background:#e4f2c8;border-bottom-color:#e4f2c8}.action.put{border-color:#f7f2c3}.action.put h4.action-heading{color:#b1a74e;background:#f7f2c3;border-bottom-color:#f7f2c3}.action.patch{border-color:#f7f2c3}.action.patch h4.action-heading{color:#b1a74e;background:#f7f2c3;border-bottom-color:#f7f2c3}.action.delete{border-color:#f2d8e1}.action.delete h4.action-heading{color:#c14a74;background:#f2d8e1;border-bottom-color:#f2d8e1}</style></head><body class="preload"><div id="nav-background"></div><div class="container-fluid triple"><div class="row"><nav><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#oauth">OAuth</a></div><div class="collapse-content"><ul><li><a href="#header-エンドポイント">エンドポイント</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#イベント">イベント</a></div><div class="collapse-content"><ul><li><a href="#イベント-イベント検索-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>イベント検索</a></li><li><a href="#イベント-イベントオファー検索-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>イベントオファー検索</a></li><li><a href="#イベント-座席ステータス検索-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>座席ステータス検索</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#注文">注文</a></div><div class="collapse-content"><ul><li><a href="#注文-確認番号で注文検索-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>確認番号で注文検索</a></li><li><a href="#注文-注文アイテム検索-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>注文アイテム検索</a></li><li><a href="#注文-注文コード発行-post"><span class="badge post"><i class="fa fa-plus"></i></span>注文コード発行</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#決済">決済</a></div><div class="collapse-content"><ul><li><a href="#決済-クレジットカード決済承認-post"><span class="badge post"><i class="fa fa-plus"></i></span>クレジットカード決済承認</a></li><li><a href="#決済-決済承認取り消し-post"><span class="badge post"><i class="fa fa-plus"></i></span>決済承認取り消し</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#施設">施設</a></div><div class="collapse-content"><ul><li><a href="#施設-施設検索-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>施設検索</a></li><li><a href="#施設-ルーム検索-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>ルーム検索</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#プロダクト">プロダクト</a></div><div class="collapse-content"><ul><li><a href="#プロダクト-決済サービス検索-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>決済サービス検索</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#販売者">販売者</a></div><div class="collapse-content"><ul><li><a href="#販売者-販売者検索-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>販売者検索</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#取引">取引</a></div><div class="collapse-content"><ul><li><a href="#取引-取引開始-post"><span class="badge post"><i class="fa fa-plus"></i></span>取引開始</a></li><li><a href="#取引-取引確定-post"><span class="badge post"><i class="fa fa-plus"></i></span>取引確定</a></li><li><a href="#取引-取引中止-post"><span class="badge post"><i class="fa fa-plus"></i></span>取引中止</a></li><li><a href="#取引-イベントオファー承認-post"><span class="badge post"><i class="fa fa-plus"></i></span>イベントオファー承認</a></li><li><a href="#取引-イベントオファー承認取り消し-post"><span class="badge post"><i class="fa fa-plus"></i></span>イベントオファー承認取り消し</a></li></ul></div></div><p style="text-align: center; word-wrap: break-word;"><a href="https://example.com">https://example.com</a></p></nav><div class="content"><div id="right-panel-background"></div><div class="middle"><header><h1 id="top">Smart Theater API Wrapper Documentation</h1></header></div><div class="right"><h5>API Endpoint</h5><a href="https://example.com">https://example.com</a></div><div class="middle"><p>Smart Theater API Wrapper は、Smart Theater を利用したアプリケーション開発を可能にするためのものです。</p>
+<p>基本仕様は以下に従っています。</p>
+<p><a href="https://oauth.net/2/">OAuth 2.0</a></p>
+<p><a href="http://tools.ietf.org/html/rfc6749">OAuth 2.0 Framework</a></p>
+<p><a href="http://tools.ietf.org/html/rfc6749">OAuth 2.0 Framework</a></p>
+<p>開発前に、運営側よりエンドポイント、認証情報を取得してください。</p>
+</div><div class="middle"><section id="oauth" class="resource-group"><h2 class="group-heading">OAuth <a href="#oauth" class="permalink">&para;</a></h2><h2 id="header-エンドポイント">エンドポイント <a class="permalink" href="#header-エンドポイント" aria-hidden="true">¶</a></h2>
+<p><a href="https://docs.aws.amazon.com/ja_jp/cognito/latest/developerguide/authorization-endpoint.html">認可エンドポイント</a></p>
+<p><a href="https://docs.aws.amazon.com/ja_jp/cognito/latest/developerguide/token-endpoint.html">トークンエンドポイント</a></p>
+<p><a href="https://docs.aws.amazon.com/ja_jp/cognito/latest/developerguide/login-endpoint.html">ログインエンドポイント</a></p>
+<p><a href="https://docs.aws.amazon.com/ja_jp/cognito/latest/developerguide/logout-endpoint.html">ログアウトエンドポイント</a></p>
+</section></div><div class="middle"><section id="イベント" class="resource-group"><h2 class="group-heading">イベント <a href="#イベント" class="permalink">&para;</a></h2></section></div><div class="middle"><div id="イベント-イベント検索" class="resource"><h3 class="resource-heading">イベント検索 <a href="#イベント-イベント検索" class="permalink">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://example.com</span>/projects/<span class="hljs-attribute" title="id">xxx</span>/event/screeningEvent/search?<span class="hljs-attribute">page=</span><span class="hljs-literal">1</span>&<span class="hljs-attribute">limit=</span><span class="hljs-literal">10</span>&<span class="hljs-attribute">startFrom=</span><span class="hljs-literal">2023-01-01T00:00:00.000Z</span>&<span class="hljs-attribute">startThrough=</span><span class="hljs-literal">2023-01-01T00:00:00.000Z</span></span></div><div class="tabs"><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>[
+  {
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">ja</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+      "<span class="hljs-attribute">en</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">startDate</span>": <span class="hljs-value"><span class="hljs-string">"2023-01-01T00:00:00.000Z"</span></span>,
+    "<span class="hljs-attribute">endDate</span>": <span class="hljs-value"><span class="hljs-string">"2023-01-01T00:00:00.000Z"</span></span>,
+    "<span class="hljs-attribute">doorTime</span>": <span class="hljs-value"><span class="hljs-string">"2023-01-01T00:00:00.000Z"</span></span>,
+    "<span class="hljs-attribute">maximumAttendeeCapacity</span>": <span class="hljs-value"><span class="hljs-number">10</span></span>,
+    "<span class="hljs-attribute">remainingAttendeeCapacity</span>": <span class="hljs-value"><span class="hljs-number">10</span></span>,
+    "<span class="hljs-attribute">offers</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">validFrom</span>": <span class="hljs-value"><span class="hljs-string">"2023-01-01T00:00:00.000Z"</span></span>,
+      "<span class="hljs-attribute">validThrough</span>": <span class="hljs-value"><span class="hljs-string">"2023-01-01T00:00:00.000Z"</span></span>,
+      "<span class="hljs-attribute">availableFrom</span>": <span class="hljs-value"><span class="hljs-string">"2023-01-01T00:00:00.000Z"</span></span>,
+      "<span class="hljs-attribute">availableThrough</span>": <span class="hljs-value"><span class="hljs-string">"2023-01-01T00:00:00.000Z"</span></span>,
+      "<span class="hljs-attribute">login</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">validFrom</span>": <span class="hljs-value"><span class="hljs-string">"2023-01-01T00:00:00.000Z"</span></span>,
+        "<span class="hljs-attribute">validThrough</span>": <span class="hljs-value"><span class="hljs-string">"2023-01-01T00:00:00.000Z"</span></span>,
+        "<span class="hljs-attribute">availableFrom</span>": <span class="hljs-value"><span class="hljs-string">"2023-01-01T00:00:00.000Z"</span></span>,
+        "<span class="hljs-attribute">availableThrough</span>": <span class="hljs-value"><span class="hljs-string">"2023-01-01T00:00:00.000Z"</span>
+      </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">location</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">ja</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+        "<span class="hljs-attribute">en</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">branchCode</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">superEvent</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+      "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">ja</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+        "<span class="hljs-attribute">en</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">headline</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">ja</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+        "<span class="hljs-attribute">en</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">ja</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+        "<span class="hljs-attribute">en</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">location</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">ja</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+          "<span class="hljs-attribute">en</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">branchCode</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">workPerformed</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+        "<span class="hljs-attribute">identifier</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+      </span>}
+    </span>}
+  </span>}
+]</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+  "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+    "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"イベント id"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+        "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">ja</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"イベント名称（日本語）"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">en</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"イベント名称（英語）"</span>
+          </span>}
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">startDate</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"開始日時 ISO 8601 date format"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">endDate</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"終了日時 ISO 8601 date format"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">doorTime</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"開場日時 ISO 8601 date format"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">maximumAttendeeCapacity</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"最大収容人数"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">remainingAttendeeCapacity</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"残り収容人数"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">offers</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+        "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">validFrom</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"販売開始日時 ISO 8601 date format"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">validThrough</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"販売終了日時 ISO 8601 date format"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">availableFrom</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"表示開始日時 ISO 8601 date format"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">availableThrough</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"表示終了日時 ISO 8601 date login"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">login</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+            "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">validFrom</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"販売開始日時 ISO 8601 date format"</span>
+              </span>}</span>,
+              "<span class="hljs-attribute">validThrough</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"販売終了日時 ISO 8601 date format"</span>
+              </span>}</span>,
+              "<span class="hljs-attribute">availableFrom</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"表示開始日時 ISO 8601 date format"</span>
+              </span>}</span>,
+              "<span class="hljs-attribute">availableThrough</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"表示終了日時 ISO 8601 date format"</span>
+              </span>}
+            </span>}</span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"ログイン時販売表示情報"</span>
+          </span>}
+        </span>}</span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"販売表示情報"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">location</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+        "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+            "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">ja</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"ルーム名称（日本語）"</span>
+              </span>}</span>,
+              "<span class="hljs-attribute">en</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"ルーム名称（英語）"</span>
+              </span>}
+            </span>}
+          </span>}</span>,
+          "<span class="hljs-attribute">branchCode</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"ルームコード"</span>
+          </span>}
+        </span>}</span>,
+        "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+          <span class="hljs-string">"branchCode"</span>
+        ]
+      </span>}</span>,
+      "<span class="hljs-attribute">superEvent</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+        "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"施設コンテンツ id"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+            "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">ja</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"施設コンテンツ名称（日本語）"</span>
+              </span>}</span>,
+              "<span class="hljs-attribute">en</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"施設コンテンツ名称（英語）"</span>
+              </span>}
+            </span>}
+          </span>}</span>,
+          "<span class="hljs-attribute">headline</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+            "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">ja</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"施設コンテンツサブタイトル（日本語）"</span>
+              </span>}</span>,
+              "<span class="hljs-attribute">en</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"施設コンテンツサブタイトル（英語）"</span>
+              </span>}
+            </span>}
+          </span>}</span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+            "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">ja</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"施設コンテンツ補足説明（日本語）"</span>
+              </span>}</span>,
+              "<span class="hljs-attribute">en</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"施設コンテンツ補足説明（英語）"</span>
+              </span>}
+            </span>}
+          </span>}</span>,
+          "<span class="hljs-attribute">location</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+            "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+                "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+                  "<span class="hljs-attribute">ja</span>": <span class="hljs-value">{
+                    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                    "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"施設名称（日本語）"</span>
+                  </span>}</span>,
+                  "<span class="hljs-attribute">en</span>": <span class="hljs-value">{
+                    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                    "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"施設名称（英語）"</span>
+                  </span>}
+                </span>}
+              </span>}</span>,
+              "<span class="hljs-attribute">branchCode</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"施設コード"</span>
+              </span>}
+            </span>}</span>,
+            "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+              <span class="hljs-string">"branchCode"</span>
+            ]
+          </span>}</span>,
+          "<span class="hljs-attribute">workPerformed</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+            "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"コンテンツ id"</span>
+              </span>}</span>,
+              "<span class="hljs-attribute">identifier</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"コンテンツコード"</span>
+              </span>}
+            </span>}</span>,
+            "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+              <span class="hljs-string">"id"</span>,
+              <span class="hljs-string">"identifier"</span>
+            ]
+          </span>}
+        </span>}</span>,
+        "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+          <span class="hljs-string">"id"</span>
+        ]
+      </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+      <span class="hljs-string">"id"</span>,
+      <span class="hljs-string">"startDate"</span>,
+      <span class="hljs-string">"endDate"</span>,
+      <span class="hljs-string">"doorTime"</span>
+    ]
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div><div class="middle"><div id="イベント-イベント検索-get" class="action get"><h4 class="action-heading"><div class="name">イベント検索</div><a href="#イベント-イベント検索-get" class="method get">GET</a><code class="uri">/projects/{id}/event/screeningEvent/search{?page,limit,startFrom,startThrough}</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>プロジェクト id</p>
+</dd><dt>page</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>`1</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>ページ</p>
+</dd><dt>limit</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>`100</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>10</span></span><p>最大取得件数</p>
+</dd><dt>startFrom</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>2023-01-01T00:00:00.000Z</span></span><p>開始日時範囲(から) ISO 8601 date format</p>
+</dd><dt>startThrough</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>2023-01-01T00:00:00.000Z</span></span><p>開始日時範囲(まで) ISO 8601 date format</p>
+</dd></dl></div></div></div><hr class="split"><div class="middle"><div id="イベント-イベントオファー検索" class="resource"><h3 class="resource-heading">イベントオファー検索 <a href="#イベント-イベントオファー検索" class="permalink">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://example.com</span>/projects/<span class="hljs-attribute" title="id">xxx</span>/event/screeningEvent/searchTicketOffers?<span class="hljs-attribute">page=</span><span class="hljs-literal">1</span>&<span class="hljs-attribute">limit=</span><span class="hljs-literal">10</span>&<span class="hljs-attribute">event.id=</span><span class="hljs-literal">xxx</span></span></div><div class="tabs"><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>[
+  {
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">ja</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+      "<span class="hljs-attribute">en</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">description</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">ja</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+      "<span class="hljs-attribute">en</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">sortIndex</span>": <span class="hljs-value"><span class="hljs-string">"1"</span></span>,
+    "<span class="hljs-attribute">priceSpecification</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">priceComponent</span>": <span class="hljs-value">[
+        {
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">ja</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+            "<span class="hljs-attribute">en</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-number">1000</span></span>,
+          "<span class="hljs-attribute">typeOf</span>": <span class="hljs-value"><span class="hljs-string">"UnitPriceSpecification"</span></span>,
+          "<span class="hljs-attribute">referenceQuantity</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">value</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+          </span>}
+        </span>}
+      ]
+    </span>}
+  </span>}
+]</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+  "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+    "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"オファー id"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+        "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">ja</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"オファー名称（日本語）"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">en</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"オファー名称（英語）"</span>
+          </span>}
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+        "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">ja</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"オファー説明（日本語）"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">en</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"オファー説明（英語）"</span>
+          </span>}
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">sortIndex</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"オファー並び順"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">priceSpecification</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+        "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">priceComponent</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+            "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+                    "<span class="hljs-attribute">ja</span>": <span class="hljs-value">{
+                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"価格要素名称（日本語）"</span>
+                    </span>}</span>,
+                    "<span class="hljs-attribute">en</span>": <span class="hljs-value">{
+                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"価格要素名称（英語）"</span>
+                    </span>}
+                  </span>}
+                </span>}</span>,
+                "<span class="hljs-attribute">price</span>": <span class="hljs-value">{
+                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+                  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"価格要素価格"</span>
+                </span>}</span>,
+                "<span class="hljs-attribute">typeOf</span>": <span class="hljs-value">{
+                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                  "<span class="hljs-attribute">enum</span>": <span class="hljs-value">[
+                    <span class="hljs-string">"UnitPriceSpecification"</span>,
+                    <span class="hljs-string">"CategoryCodeChargeSpecification"</span>,
+                    <span class="hljs-string">"MovieTicketTypeChargeSpecification"</span>
+                  ]</span>,
+                  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"価格要素タイプ CategoryCodeChargeSpecification (カテゴリーコード加算仕様) or MovieTicketTypeChargeSpecification (ムビチケ加算仕様) or UnitPriceSpecification (単価仕様)"</span>
+                </span>}</span>,
+                "<span class="hljs-attribute">referenceQuantity</span>": <span class="hljs-value">{
+                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+                    "<span class="hljs-attribute">value</span>": <span class="hljs-value">{
+                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+                      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"価格要素基準数量"</span>
+                    </span>}
+                  </span>}
+                </span>}
+              </span>}</span>,
+              "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+                <span class="hljs-string">"price"</span>,
+                <span class="hljs-string">"typeOf"</span>
+              ]
+            </span>}
+          </span>}
+        </span>}</span>,
+        "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+          <span class="hljs-string">"priceComponent"</span>
+        ]
+      </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+      <span class="hljs-string">"id"</span>
+    ]
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div><div class="middle"><div id="イベント-イベントオファー検索-get" class="action get"><h4 class="action-heading"><div class="name">イベントオファー検索</div><a href="#イベント-イベントオファー検索-get" class="method get">GET</a><code class="uri">/projects/{id}/event/screeningEvent/searchTicketOffers{?page,limit,event.id}</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>プロジェクト id</p>
+</dd><dt>page</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>`1</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>ページ</p>
+</dd><dt>limit</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>`100</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>10</span></span><p>最大取得件数</p>
+</dd><dt>event.id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>イベント id</p>
+</dd></dl></div></div></div><hr class="split"><div class="middle"><div id="イベント-座席ステータス検索" class="resource"><h3 class="resource-heading">座席ステータス検索 <a href="#イベント-座席ステータス検索" class="permalink">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://example.com</span>/projects/<span class="hljs-attribute" title="id">xxx</span>/event/screeningEvent/searchSeats?<span class="hljs-attribute">page=</span><span class="hljs-literal">1</span>&<span class="hljs-attribute">limit=</span><span class="hljs-literal">10</span>&<span class="hljs-attribute">event.id=</span><span class="hljs-literal">xxx</span></span></div><div class="tabs"><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>[
+  {
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">ja</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+      "<span class="hljs-attribute">en</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">branchCode</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+    "<span class="hljs-attribute">containedInPlace</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">ja</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+        "<span class="hljs-attribute">en</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">branchCode</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">offers</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">xxx</span>": <span class="hljs-value"><span class="hljs-string">"InStock"</span>
+      </span>}
+    ]
+  </span>}
+]</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+  "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+    "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+        "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">ja</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"座席名称（日本語）"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">en</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"座席名称（英語）"</span>
+          </span>}
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">branchCode</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"座席コード"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">containedInPlace</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+        "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+            "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">ja</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"セクション名称（日本語）"</span>
+              </span>}</span>,
+              "<span class="hljs-attribute">en</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"セクション名称（英語）"</span>
+              </span>}
+            </span>}
+          </span>}</span>,
+          "<span class="hljs-attribute">branchCode</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"セクションコード"</span>
+          </span>}
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">offers</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+        "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">xxx</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">enum</span>": <span class="hljs-value">[
+                <span class="hljs-string">"InStock"</span>,
+                <span class="hljs-string">"OutOfStock"</span>
+              ]</span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"在庫ステータス InStock(在庫あり) or OutOfStock(在庫なし)"</span>
+            </span>}
+          </span>}
+        </span>}
+      </span>}
+    </span>}
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div><div class="middle"><div id="イベント-座席ステータス検索-get" class="action get"><h4 class="action-heading"><div class="name">座席ステータス検索</div><a href="#イベント-座席ステータス検索-get" class="method get">GET</a><code class="uri">/projects/{id}/event/screeningEvent/searchSeats{?page,limit,event.id}</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>プロジェクト id</p>
+</dd><dt>page</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>`1</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>ページ</p>
+</dd><dt>limit</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>`100</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>10</span></span><p>最大取得件数</p>
+</dd><dt>event.id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>イベント id</p>
+</dd></dl></div></div></div><hr class="split"><div class="middle"><section id="注文" class="resource-group"><h2 class="group-heading">注文 <a href="#注文" class="permalink">&para;</a></h2><!-- ## 注文検索 [/projects/{id}/order/search{?page,limit,orderDate.lte,orderDate.gte,orderNumbers,confirmationNumbers}]
+
+### 注文検索[GET]
+
+-   Parameters
+
+    -   id: `xxx` (string, required) - プロジェクトid
+    -   page: `1` (number, optional) - ページ
+        -   Default: `1
+    -   limit: `10` (number, optional) - 最大取得件数
+        -   Default: `100
+    -   orderDate.lte: `2023-01-01T00:00:00.000Z` (string, optional) - 注文日時範囲(から)ISO 8601 date format
+    -   orderDate.gte: `2023-01-01T00:00:00.000Z` (string, optional) - 注文日時範囲(まで)ISO 8601 date format
+    -   orderNumbers: `['xxx']` (array, optional) - 注文番号リスト
+    -   confirmationNumbers: `['xxx']` (array, optional) - 確認番号リスト
+
+-   Response 200 (application/json)
+
+    -   Attributes (array, fixed-type)
+        -   (Types.Order.Search) - 注文` --></section></div><div class="middle"><div id="注文-確認番号で注文検索" class="resource"><h3 class="resource-heading">確認番号で注文検索 <a href="#注文-確認番号で注文検索" class="permalink">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://example.com</span>/projects/order/findByConfirmationNumber?<span class="hljs-attribute">confirmationNumber=</span><span class="hljs-literal">xxx</span>&<span class="hljs-attribute">customer.telephone=</span><span class="hljs-literal">+819012345678</span></span></div><div class="tabs"><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>[
+  {
+    "<span class="hljs-attribute">orderDate</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+    "<span class="hljs-attribute">confirmationNumber</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+    "<span class="hljs-attribute">orderNumber</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+    "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-number">1000</span></span>,
+    "<span class="hljs-attribute">orderStatus</span>": <span class="hljs-value"><span class="hljs-string">"OrderDelivered"</span>
+  </span>}
+]</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+  "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+    "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">orderDate</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"注文日時 ISO 8601 date format"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">confirmationNumber</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"確認番号"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">orderNumber</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"注文番号"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">price</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"注文金額"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">orderStatus</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+        "<span class="hljs-attribute">enum</span>": <span class="hljs-value">[
+          <span class="hljs-string">"OrderDelivered"</span>,
+          <span class="hljs-string">"OrderReturned"</span>
+        ]</span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"注文ステータス OrderDelivered(注文済み) or OrderReturned(注文返品済み)"</span>
+      </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+      <span class="hljs-string">"confirmationNumber"</span>,
+      <span class="hljs-string">"orderNumber"</span>,
+      <span class="hljs-string">"price"</span>
+    ]
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div><div class="middle"><div id="注文-確認番号で注文検索-get" class="action get"><h4 class="action-heading"><div class="name">確認番号で注文検索</div><a href="#注文-確認番号で注文検索-get" class="method get">GET</a><code class="uri">/projects/order/findByConfirmationNumber{?confirmationNumber,customer.telephone}</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>confirmationNumber</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>確認番号</p>
+</dd><dt>customer.telephone</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>+819012345678</span></span><p>購入者電話番号 E.164</p>
+</dd></dl></div></div></div><hr class="split"><div class="middle"><div id="注文-注文アイテム検索" class="resource"><h3 class="resource-heading">注文アイテム検索 <a href="#注文-注文アイテム検索" class="permalink">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://example.com</span>/projects/order/searchAcceptedOffersByConfirmationNumber?<span class="hljs-attribute">page=</span><span class="hljs-literal">1</span>&<span class="hljs-attribute">limit=</span><span class="hljs-literal">10</span>&<span class="hljs-attribute">confirmationNumber=</span><span class="hljs-literal">xxx</span>&<span class="hljs-attribute">orderNumber=</span><span class="hljs-literal">xxx</span></span></div><div class="tabs"><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>[
+  {
+    "<span class="hljs-attribute">itemOffered</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+      "<span class="hljs-attribute">reservationNumber</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+      "<span class="hljs-attribute">reservedTicket</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">ticketType</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">identifier</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">ja</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+            "<span class="hljs-attribute">en</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+          </span>}
+        </span>}</span>,
+        "<span class="hljs-attribute">ticketedSeat</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">seatNumber</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+          "<span class="hljs-attribute">seatSection</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">priceSpecification</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">priceComponent</span>": <span class="hljs-value">[
+          {
+            "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">ja</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+              "<span class="hljs-attribute">en</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-number">1000</span></span>,
+            "<span class="hljs-attribute">typeOf</span>": <span class="hljs-value"><span class="hljs-string">"UnitPriceSpecification"</span></span>,
+            "<span class="hljs-attribute">referenceQuantity</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">value</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+            </span>}
+          </span>}
+        ]
+      </span>}
+    </span>}
+  </span>}
+]</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+  "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+    "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">itemOffered</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+        "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"予約 id"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">reservationNumber</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"予約番号"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">reservedTicket</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+            "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">ticketType</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+                "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+                  "<span class="hljs-attribute">identifier</span>": <span class="hljs-value">{
+                    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                    "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"オファーコード"</span>
+                  </span>}</span>,
+                  "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+                    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+                    "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+                      "<span class="hljs-attribute">ja</span>": <span class="hljs-value">{
+                        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"オファー名称（日本語）"</span>
+                      </span>}</span>,
+                      "<span class="hljs-attribute">en</span>": <span class="hljs-value">{
+                        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"オファー名称（英語）"</span>
+                      </span>}
+                    </span>}
+                  </span>}
+                </span>}</span>,
+                "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+                  <span class="hljs-string">"identifier"</span>
+                ]
+              </span>}</span>,
+              "<span class="hljs-attribute">ticketedSeat</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+                "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+                  "<span class="hljs-attribute">seatNumber</span>": <span class="hljs-value">{
+                    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                    "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"座席コード\n\n&lt;!-- -   seatRow: `xxx` (string, required) - 座席行` --&gt;"</span>
+                  </span>}</span>,
+                  "<span class="hljs-attribute">seatSection</span>": <span class="hljs-value">{
+                    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                    "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"座席セクション"</span>
+                  </span>}
+                </span>}</span>,
+                "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+                  <span class="hljs-string">"seatNumber"</span>,
+                  <span class="hljs-string">"seatSection"</span>
+                ]
+              </span>}
+            </span>}
+          </span>}</span>,
+          "<span class="hljs-attribute">priceSpecification</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+            "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">priceComponent</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+                "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
+                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+                  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+                    "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+                      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+                        "<span class="hljs-attribute">ja</span>": <span class="hljs-value">{
+                          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"価格要素名称（日本語）"</span>
+                        </span>}</span>,
+                        "<span class="hljs-attribute">en</span>": <span class="hljs-value">{
+                          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"価格要素名称（英語）"</span>
+                        </span>}
+                      </span>}
+                    </span>}</span>,
+                    "<span class="hljs-attribute">price</span>": <span class="hljs-value">{
+                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+                      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"価格要素価格"</span>
+                    </span>}</span>,
+                    "<span class="hljs-attribute">typeOf</span>": <span class="hljs-value">{
+                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                      "<span class="hljs-attribute">enum</span>": <span class="hljs-value">[
+                        <span class="hljs-string">"UnitPriceSpecification"</span>,
+                        <span class="hljs-string">"CategoryCodeChargeSpecification"</span>,
+                        <span class="hljs-string">"MovieTicketTypeChargeSpecification"</span>
+                      ]</span>,
+                      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"価格要素タイプ CategoryCodeChargeSpecification (カテゴリーコード加算仕様) or MovieTicketTypeChargeSpecification (ムビチケ加算仕様) or UnitPriceSpecification (単価仕様)"</span>
+                    </span>}</span>,
+                    "<span class="hljs-attribute">referenceQuantity</span>": <span class="hljs-value">{
+                      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+                      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+                        "<span class="hljs-attribute">value</span>": <span class="hljs-value">{
+                          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+                          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"価格要素基準数量"</span>
+                        </span>}
+                      </span>}
+                    </span>}
+                  </span>}</span>,
+                  "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+                    <span class="hljs-string">"price"</span>,
+                    <span class="hljs-string">"typeOf"</span>
+                  ]
+                </span>}
+              </span>}
+            </span>}</span>,
+            "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+              <span class="hljs-string">"priceComponent"</span>
+            ]
+          </span>}
+        </span>}</span>,
+        "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+          <span class="hljs-string">"id"</span>,
+          <span class="hljs-string">"reservationNumber"</span>
+        ]
+      </span>}
+    </span>}
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div><div class="middle"><div id="注文-注文アイテム検索-get" class="action get"><h4 class="action-heading"><div class="name">注文アイテム検索</div><a href="#注文-注文アイテム検索-get" class="method get">GET</a><code class="uri">/projects/order/searchAcceptedOffersByConfirmationNumber{?page,limit,confirmationNumber,orderNumber}</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>page</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>`1</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>ページ</p>
+</dd><dt>limit</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>`100</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>10</span></span><p>最大取得件数</p>
+</dd><dt>confirmationNumber</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>確認番号</p>
+</dd><dt>orderNumber</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>注文番号</p>
+</dd></dl></div></div></div><hr class="split"><div class="middle"><div id="注文-注文コード発行" class="resource"><h3 class="resource-heading">注文コード発行 <a href="#注文-注文コード発行" class="permalink">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">https://example.com</span>/projects/<span class="hljs-attribute" title="id">xxx</span>/order/authorize</span></div><div class="tabs"><div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">confirmationNumber</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+  "<span class="hljs-attribute">expiresInSeconds</span>": <span class="hljs-value"><span class="hljs-string">"2023-01-01T00:00:00.000Z"</span></span>,
+  "<span class="hljs-attribute">customer</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">telephone</span>": <span class="hljs-value"><span class="hljs-string">"+819012345678"</span>
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">confirmationNumber</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"確認番号"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">expiresInSeconds</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"コード期限 ISO 8601 date format"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">customer</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">telephone</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"購入者電話番号 E.164"</span>
+        </span>}
+      </span>}
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+    <span class="hljs-string">"confirmationNumber"</span>,
+    <span class="hljs-string">"expiresInSeconds"</span>
+  ]
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+  "<span class="hljs-attribute">expires</span>": <span class="hljs-value"><span class="hljs-string">"2023-01-01T00:00:00.000Z"</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"取引 id"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">expires</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"取引期限 ISO 8601 date format"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+    <span class="hljs-string">"id"</span>,
+    <span class="hljs-string">"expires"</span>
+  ]
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div></div><div class="middle"><div id="注文-注文コード発行-post" class="action post"><h4 class="action-heading"><div class="name">注文コード発行</div><a href="#注文-注文コード発行-post" class="method post">POST</a><code class="uri">/projects/{id}/order/authorize</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>プロジェクト id</p>
+</dd></dl></div></div></div><hr class="split"><div class="middle"><section id="決済" class="resource-group"><h2 class="group-heading">決済 <a href="#決済" class="permalink">&para;</a></h2></section></div><div class="middle"><div id="決済-クレジットカード決済承認" class="resource"><h3 class="resource-heading">クレジットカード決済承認 <a href="#決済-クレジットカード決済承認" class="permalink">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">https://example.com</span>/projects/<span class="hljs-attribute" title="id">xxx</span>/payment/authorizeCreditCard</span></div><div class="tabs"><div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">purpose</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">object</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">amount</span>": <span class="hljs-value"><span class="hljs-number">1000</span></span>,
+    "<span class="hljs-attribute">creditCard</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">token</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">paymentMethod</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+    "<span class="hljs-attribute">issuedThrough</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+    </span>}
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">purpose</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"取引 id"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+        <span class="hljs-string">"id"</span>
+      ]
+    </span>}</span>,
+    "<span class="hljs-attribute">object</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">amount</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"number"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"決済金額"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">creditCard</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">token</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"トークン化されたクレジットカード情報"</span>
+            </span>}
+          </span>}</span>,
+          "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+            <span class="hljs-string">"token"</span>
+          ]
+        </span>}</span>,
+        "<span class="hljs-attribute">paymentMethod</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"決済方法区分コード"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">issuedThrough</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"決済サービス id"</span>
+            </span>}
+          </span>}</span>,
+          "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+            <span class="hljs-string">"id"</span>
+          ]
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+        <span class="hljs-string">"amount"</span>,
+        <span class="hljs-string">"paymentMethod"</span>
+      ]
+    </span>}
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"決済承認 id"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+    <span class="hljs-string">"id"</span>
+  ]
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div></div><div class="middle"><div id="決済-クレジットカード決済承認-post" class="action post"><h4 class="action-heading"><div class="name">クレジットカード決済承認</div><a href="#決済-クレジットカード決済承認-post" class="method post">POST</a><code class="uri">/projects/{id}/payment/authorizeCreditCard</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>プロジェクト id</p>
+</dd></dl></div></div></div><hr class="split"><div class="middle"><div id="決済-決済承認取り消し" class="resource"><h3 class="resource-heading">決済承認取り消し <a href="#決済-決済承認取り消し" class="permalink">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">https://example.com</span>/projects/<span class="hljs-attribute" title="id">xxx</span>/payment/voidTransaction</span></div><div class="tabs"><div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">purpose</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+  "<span class="hljs-attribute">object</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">typeOf</span>": <span class="hljs-value"><span class="hljs-string">"CreditCard"</span>
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">purpose</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"取引 id"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+        <span class="hljs-string">"id"</span>
+      ]
+    </span>}</span>,
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"決済承認 id"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">object</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">typeOf</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">enum</span>": <span class="hljs-value">[
+            <span class="hljs-string">"CreditCard"</span>
+          ]</span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"決済承認タイプ CreditCard(クレジットカード)"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+        <span class="hljs-string">"typeOf"</span>
+      ]
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+    <span class="hljs-string">"id"</span>
+  ]
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div></div></div></div></div></div></div></div><div class="middle"><div id="決済-決済承認取り消し-post" class="action post"><h4 class="action-heading"><div class="name">決済承認取り消し</div><a href="#決済-決済承認取り消し-post" class="method post">POST</a><code class="uri">/projects/{id}/payment/voidTransaction</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>プロジェクト id</p>
+</dd></dl></div></div></div><hr class="split"><div class="middle"><section id="施設" class="resource-group"><h2 class="group-heading">施設 <a href="#施設" class="permalink">&para;</a></h2></section></div><div class="middle"><div id="施設-施設検索" class="resource"><h3 class="resource-heading">施設検索 <a href="#施設-施設検索" class="permalink">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://example.com</span>/projects/<span class="hljs-attribute" title="id">xxx</span>/place/searchMovieTheaters?<span class="hljs-attribute">page=</span><span class="hljs-literal">1</span>&<span class="hljs-attribute">limit=</span><span class="hljs-literal">10</span></span></div><div class="tabs"><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>[
+  {
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+  </span>}
+]</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+  "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+    "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"施設 id"</span>
+      </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+      <span class="hljs-string">"id"</span>
+    ]
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div><div class="middle"><div id="施設-施設検索-get" class="action get"><h4 class="action-heading"><div class="name">施設検索</div><a href="#施設-施設検索-get" class="method get">GET</a><code class="uri">/projects/{id}/place/searchMovieTheaters{?page,limit}</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>プロジェクト id</p>
+</dd><dt>page</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>`1</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>ページ</p>
+</dd><dt>limit</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>`100</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>10</span></span><p>最大取得件数</p>
+</dd></dl></div></div></div><hr class="split"><div class="middle"><div id="施設-ルーム検索" class="resource"><h3 class="resource-heading">ルーム検索 <a href="#施設-ルーム検索" class="permalink">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://example.com</span>/projects/<span class="hljs-attribute" title="id">xxx</span>/place/searchScreeningRooms?<span class="hljs-attribute">page=</span><span class="hljs-literal">1</span>&<span class="hljs-attribute">limit=</span><span class="hljs-literal">10</span></span></div><div class="tabs"><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>[
+  {
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">ja</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+      "<span class="hljs-attribute">en</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">branchCode</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+  </span>}
+]</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+  "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+    "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+        "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">ja</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"ルーム名称（日本語）"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">en</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"ルーム名称（英語）"</span>
+          </span>}
+        </span>}</span>,
+        "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+          <span class="hljs-string">"ja"</span>,
+          <span class="hljs-string">"en"</span>
+        ]
+      </span>}</span>,
+      "<span class="hljs-attribute">branchCode</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"ルームコード"</span>
+      </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+      <span class="hljs-string">"branchCode"</span>
+    ]
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div><div class="middle"><div id="施設-ルーム検索-get" class="action get"><h4 class="action-heading"><div class="name">ルーム検索</div><a href="#施設-ルーム検索-get" class="method get">GET</a><code class="uri">/projects/{id}/place/searchScreeningRooms{?page,limit}</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>プロジェクト id</p>
+</dd><dt>page</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>`1</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>ページ</p>
+</dd><dt>limit</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>`100</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>10</span></span><p>最大取得件数</p>
+</dd></dl></div></div></div><hr class="split"><div class="middle"><section id="プロダクト" class="resource-group"><h2 class="group-heading">プロダクト <a href="#プロダクト" class="permalink">&para;</a></h2></section></div><div class="middle"><div id="プロダクト-決済サービス検索" class="resource"><h3 class="resource-heading">決済サービス検索 <a href="#プロダクト-決済サービス検索" class="permalink">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://example.com</span>/projects/<span class="hljs-attribute" title="id">xxx</span>/product/searchCreditCard?<span class="hljs-attribute">page=</span><span class="hljs-literal">1</span>&<span class="hljs-attribute">limit=</span><span class="hljs-literal">10</span></span></div><div class="tabs"><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>[
+  {
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+    "<span class="hljs-attribute">provider</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+      "<span class="hljs-attribute">credentials</span>": <span class="hljs-value">[
+        {
+          "<span class="hljs-attribute">shopId</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+          "<span class="hljs-attribute">tokenizationCode</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+        </span>}
+      ]
+    </span>}</span>,
+    "<span class="hljs-attribute">serviceType</span>": <span class="hljs-value">[
+      <span class="hljs-string">"codeValue"</span>
+    ]
+  </span>}
+]</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+  "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+    "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"決済サービス id"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">provider</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+        "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"販売者 id"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">credentials</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+            "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+              "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">shopId</span>": <span class="hljs-value">{
+                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"GMO ショップ ID"</span>
+                </span>}</span>,
+                "<span class="hljs-attribute">tokenizationCode</span>": <span class="hljs-value">{
+                  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"トークン認証コード\n\n&lt;!-- -   paymentUrl\n\n-   expiresInSeconds: `1000` (number, optional) - 外部決済URL有効時間(秒)` --&gt;"</span>
+                </span>}
+              </span>}
+            </span>}
+          </span>}
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">serviceType</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span>
+      </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+      <span class="hljs-string">"id"</span>
+    ]
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div><div class="middle"><div id="プロダクト-決済サービス検索-get" class="action get"><h4 class="action-heading"><div class="name">決済サービス検索</div><a href="#プロダクト-決済サービス検索-get" class="method get">GET</a><code class="uri">/projects/{id}/product/searchCreditCard{?page,limit}</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>プロジェクト id</p>
+</dd><dt>page</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>`1</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>ページ</p>
+</dd><dt>limit</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>`100</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>10</span></span><p>最大取得件数</p>
+</dd></dl></div></div></div><hr class="split"><div class="middle"><section id="販売者" class="resource-group"><h2 class="group-heading">販売者 <a href="#販売者" class="permalink">&para;</a></h2></section></div><div class="middle"><div id="販売者-販売者検索" class="resource"><h3 class="resource-heading">販売者検索 <a href="#販売者-販売者検索" class="permalink">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://example.com</span>/projects/<span class="hljs-attribute" title="id">xxx</span>/seller/search?<span class="hljs-attribute">page=</span><span class="hljs-literal">1</span>&<span class="hljs-attribute">limit=</span><span class="hljs-literal">10</span></span></div><div class="tabs"><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>[
+  {
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">ja</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+      "<span class="hljs-attribute">en</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">branchCode</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+  </span>}
+]</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+  "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+    "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"販売者 id"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+        "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">ja</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"販売者名称（日本語）"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">en</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"販売者名称（英語）"</span>
+          </span>}
+        </span>}</span>,
+        "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+          <span class="hljs-string">"ja"</span>,
+          <span class="hljs-string">"en"</span>
+        ]
+      </span>}</span>,
+      "<span class="hljs-attribute">branchCode</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"販売者コード"</span>
+      </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+      <span class="hljs-string">"branchCode"</span>
+    ]
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div><div class="middle"><div id="販売者-販売者検索-get" class="action get"><h4 class="action-heading"><div class="name">販売者検索</div><a href="#販売者-販売者検索-get" class="method get">GET</a><code class="uri">/projects/{id}/seller/search{?page,limit}</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>プロジェクト id</p>
+</dd><dt>page</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>`1</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>ページ</p>
+</dd><dt>limit</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>`100</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>10</span></span><p>最大取得件数</p>
+</dd></dl></div></div></div><hr class="split"><div class="middle"><section id="取引" class="resource-group"><h2 class="group-heading">取引 <a href="#取引" class="permalink">&para;</a></h2></section></div><div class="middle"><div id="取引-取引開始" class="resource"><h3 class="resource-heading">取引開始 <a href="#取引-取引開始" class="permalink">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">https://example.com</span>/projects/<span class="hljs-attribute" title="id">xxx</span>/transaction/placeOrder/start</span></div><div class="tabs"><div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">seller</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">expires</span>": <span class="hljs-value"><span class="hljs-string">"2023-01-01T00:00:00.000Z"</span></span>,
+  "<span class="hljs-attribute">passport</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">token</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">seller</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"販売者 id"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+        <span class="hljs-string">"id"</span>
+      ]
+    </span>}</span>,
+    "<span class="hljs-attribute">expires</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"取引期限 ISO 8601 date format"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">passport</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">token</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"パスポート token"</span>
+        </span>}
+      </span>}
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+    <span class="hljs-string">"expires"</span>
+  ]
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+  "<span class="hljs-attribute">expires</span>": <span class="hljs-value"><span class="hljs-string">"2023-01-01T00:00:00.000Z"</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"取引 id"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">expires</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"取引期限 ISO 8601 date format"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+    <span class="hljs-string">"id"</span>,
+    <span class="hljs-string">"expires"</span>
+  ]
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div></div><div class="middle"><div id="取引-取引開始-post" class="action post"><h4 class="action-heading"><div class="name">取引開始</div><a href="#取引-取引開始-post" class="method post">POST</a><code class="uri">/projects/{id}/transaction/placeOrder/start</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>プロジェクト id</p>
+</dd></dl></div></div></div><hr class="split"><div class="middle"><div id="取引-取引確定" class="resource"><h3 class="resource-heading">取引確定 <a href="#取引-取引確定" class="permalink">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">https://example.com</span>/projects/<span class="hljs-attribute" title="id">xxx</span>/transaction/placeOrder/confirm</span></div><div class="tabs"><div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"取引 id"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+    <span class="hljs-string">"id"</span>
+  ]
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">confirmationNumber</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+  "<span class="hljs-attribute">orderNumber</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">confirmationNumber</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"確認番号"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">orderNumber</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"注文番号"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+    <span class="hljs-string">"confirmationNumber"</span>,
+    <span class="hljs-string">"orderNumber"</span>
+  ]
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div></div><div class="middle"><div id="取引-取引確定-post" class="action post"><h4 class="action-heading"><div class="name">取引確定</div><a href="#取引-取引確定-post" class="method post">POST</a><code class="uri">/projects/{id}/transaction/placeOrder/confirm</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>プロジェクト id</p>
+</dd></dl></div></div></div><hr class="split"><div class="middle"><div id="取引-取引中止" class="resource"><h3 class="resource-heading">取引中止 <a href="#取引-取引中止" class="permalink">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">https://example.com</span>/projects/<span class="hljs-attribute" title="id">xxx</span>/transaction/placeOrder/cancel</span></div><div class="tabs"><div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"取引 id"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+    <span class="hljs-string">"id"</span>
+  ]
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><div class="description text-muted">This response has no content.</div><div style="height: 1px;"></div></div></div></div></div></div></div></div><div class="middle"><div id="取引-取引中止-post" class="action post"><h4 class="action-heading"><div class="name">取引中止</div><a href="#取引-取引中止-post" class="method post">POST</a><code class="uri">/projects/{id}/transaction/placeOrder/cancel</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>プロジェクト id</p>
+</dd></dl></div></div></div><hr class="split"><div class="middle"><div id="取引-イベントオファー承認" class="resource"><h3 class="resource-heading">イベントオファー承認 <a href="#取引-イベントオファー承認" class="permalink">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">https://example.com</span>/projects/<span class="hljs-attribute" title="id">xxx</span>/transaction/placeOrder/authorizeSeatReservation</span></div><div class="tabs"><div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">object</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">reservationFor</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">acceptedOffer</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+        "<span class="hljs-attribute">itemOffered</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">serviceOutput</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">reservedTicket</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">seatNumber</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+              "<span class="hljs-attribute">seatSection</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+            </span>}
+          </span>}
+        </span>}
+      </span>}
+    ]
+  </span>}</span>,
+  "<span class="hljs-attribute">purpose</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">object</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">reservationFor</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+          "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+              "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"イベント id"</span>
+            </span>}
+          </span>}</span>,
+          "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+            <span class="hljs-string">"id"</span>
+          ]
+        </span>}</span>,
+        "<span class="hljs-attribute">acceptedOffer</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"array"</span></span>,
+          "<span class="hljs-attribute">items</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+            "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+              "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"チケットオファー id"</span>
+              </span>}</span>,
+              "<span class="hljs-attribute">itemOffered</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+                "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+                  "<span class="hljs-attribute">serviceOutput</span>": <span class="hljs-value">{
+                    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+                    "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+                      "<span class="hljs-attribute">reservedTicket</span>": <span class="hljs-value">{
+                        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+                        "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+                          "<span class="hljs-attribute">seatNumber</span>": <span class="hljs-value">{
+                            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"座席コード"</span>
+                          </span>}</span>,
+                          "<span class="hljs-attribute">seatSection</span>": <span class="hljs-value">{
+                            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                            "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"セクションコード"</span>
+                          </span>}
+                        </span>}</span>,
+                        "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+                          <span class="hljs-string">"seatNumber"</span>,
+                          <span class="hljs-string">"seatSection"</span>
+                        ]
+                      </span>}
+                    </span>}
+                  </span>}
+                </span>}
+              </span>}
+            </span>}</span>,
+            "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+              <span class="hljs-string">"id"</span>
+            ]
+          </span>}
+        </span>}
+      </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">purpose</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"取引 id"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+        <span class="hljs-string">"id"</span>
+      ]
+    </span>}
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"アクション id"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+    <span class="hljs-string">"id"</span>
+  ]
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div></div><div class="middle"><div id="取引-イベントオファー承認-post" class="action post"><h4 class="action-heading"><div class="name">イベントオファー承認</div><a href="#取引-イベントオファー承認-post" class="method post">POST</a><code class="uri">/projects/{id}/transaction/placeOrder/authorizeSeatReservation</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>プロジェクト id</p>
+</dd></dl></div></div></div><hr class="split"><div class="middle"><div id="取引-イベントオファー承認取り消し" class="resource"><h3 class="resource-heading">イベントオファー承認取り消し <a href="#取引-イベントオファー承認取り消し" class="permalink">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">https://example.com</span>/projects/<span class="hljs-attribute" title="id">xxx</span>/transaction/placeOrder/voidSeatReservation</span></div><div class="tabs"><div class="example-names"><span>Requests</span><span class="tab-button">example 1</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span></span>,
+  "<span class="hljs-attribute">purpose</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"xxx"</span>
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  "<span class="hljs-attribute">$schema</span>": <span class="hljs-value"><span class="hljs-string">"http://json-schema.org/draft-04/schema#"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+  "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"アクション id"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">purpose</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+      "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+          "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"取引 id"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+        <span class="hljs-string">"id"</span>
+      ]
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">required</span>": <span class="hljs-value">[
+    <span class="hljs-string">"id"</span>
+  ]
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div></div></div></div></div></div></div></div><div class="middle"><div id="取引-イベントオファー承認取り消し-post" class="action post"><h4 class="action-heading"><div class="name">イベントオファー承認取り消し</div><a href="#取引-イベントオファー承認取り消し-post" class="method post">POST</a><code class="uri">/projects/{id}/transaction/placeOrder/voidSeatReservation</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>xxx</span></span><p>プロジェクト id</p>
+</dd></dl></div></div></div><hr class="split"><div class="middle"><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 02 May 2023</p></div></div></div></div><script>/* eslint-env browser */
+/* eslint quotes: [2, "single"] */
+'use strict';
+
+/*
+  Determine if a string ends with another string.
+*/
+function endsWith(str, suffix) {
+    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+}
+
+/*
+  Get a list of direct child elements by class name.
+*/
+function childrenByClass(element, name) {
+  var filtered = [];
+
+  for (var i = 0; i < element.children.length; i++) {
+    var child = element.children[i];
+    var classNames = child.className.split(' ');
+    if (classNames.indexOf(name) !== -1) {
+      filtered.push(child);
+    }
+  }
+
+  return filtered;
+}
+
+/*
+  Get an array [width, height] of the window.
+*/
+function getWindowDimensions() {
+  var w = window,
+      d = document,
+      e = d.documentElement,
+      g = d.body,
+      x = w.innerWidth || e.clientWidth || g.clientWidth,
+      y = w.innerHeight || e.clientHeight || g.clientHeight;
+
+  return [x, y];
+}
+
+/*
+  Collapse or show a request/response example.
+*/
+function toggleCollapseButton(event) {
+    var button = event.target.parentNode;
+    var content = button.parentNode.nextSibling;
+    var inner = content.children[0];
+
+    if (button.className.indexOf('collapse-button') === -1) {
+      // Clicked without hitting the right element?
+      return;
+    }
+
+    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+        // Currently showing, so let's hide it
+        button.className = 'collapse-button';
+        content.style.maxHeight = '0px';
+    } else {
+        // Currently hidden, so let's show it
+        button.className = 'collapse-button show';
+        content.style.maxHeight = inner.offsetHeight + 12 + 'px';
+    }
+}
+
+function toggleTabButton(event) {
+    var i, index;
+    var button = event.target;
+
+    // Get index of the current button.
+    var buttons = childrenByClass(button.parentNode, 'tab-button');
+    for (i = 0; i < buttons.length; i++) {
+        if (buttons[i] === button) {
+            index = i;
+            button.className = 'tab-button active';
+        } else {
+            buttons[i].className = 'tab-button';
+        }
+    }
+
+    // Hide other tabs and show this one.
+    var tabs = childrenByClass(button.parentNode.parentNode, 'tab');
+    for (i = 0; i < tabs.length; i++) {
+        if (i === index) {
+            tabs[i].style.display = 'block';
+        } else {
+            tabs[i].style.display = 'none';
+        }
+    }
+}
+
+/*
+  Collapse or show a navigation menu. It will not be hidden unless it
+  is currently selected or `force` has been passed.
+*/
+function toggleCollapseNav(event, force) {
+    var heading = event.target.parentNode;
+    var content = heading.nextSibling;
+    var inner = content.children[0];
+
+    if (heading.className.indexOf('heading') === -1) {
+      // Clicked without hitting the right element?
+      return;
+    }
+
+    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+      // Currently showing, so let's hide it, but only if this nav item
+      // is already selected. This prevents newly selected items from
+      // collapsing in an annoying fashion.
+      if (force || window.location.hash && endsWith(event.target.href, window.location.hash)) {
+        content.style.maxHeight = '0px';
+      }
+    } else {
+      // Currently hidden, so let's show it
+      content.style.maxHeight = inner.offsetHeight + 12 + 'px';
+    }
+}
+
+/*
+  Refresh the page after a live update from the server. This only
+  works in live preview mode (using the `--server` parameter).
+*/
+function refresh(body) {
+    document.querySelector('body').className = 'preload';
+    document.body.innerHTML = body;
+
+    // Re-initialize the page
+    init();
+    autoCollapse();
+
+    document.querySelector('body').className = '';
+}
+
+/*
+  Determine which navigation items should be auto-collapsed to show as many
+  as possible on the screen, based on the current window height. This also
+  collapses them.
+*/
+function autoCollapse() {
+  var windowHeight = getWindowDimensions()[1];
+  var itemsHeight = 64; /* Account for some padding */
+  var itemsArray = Array.prototype.slice.call(
+    document.querySelectorAll('nav .resource-group .heading'));
+
+  // Get the total height of the navigation items
+  itemsArray.forEach(function (item) {
+    itemsHeight += item.parentNode.offsetHeight;
+  });
+
+  // Should we auto-collapse any nav items? Try to find the smallest item
+  // that can be collapsed to show all items on the screen. If not possible,
+  // then collapse the largest item and do it again. First, sort the items
+  // by height from smallest to largest.
+  var sortedItems = itemsArray.sort(function (a, b) {
+    return a.parentNode.offsetHeight - b.parentNode.offsetHeight;
+  });
+
+  while (sortedItems.length && itemsHeight > windowHeight) {
+    for (var i = 0; i < sortedItems.length; i++) {
+      // Will collapsing this item help?
+      var itemHeight = sortedItems[i].nextSibling.offsetHeight;
+      if ((itemsHeight - itemHeight <= windowHeight) || i === sortedItems.length - 1) {
+        // It will, so let's collapse it, remove its content height from
+        // our total and then remove it from our list of candidates
+        // that can be collapsed.
+        itemsHeight -= itemHeight;
+        toggleCollapseNav({target: sortedItems[i].children[0]}, true);
+        sortedItems.splice(i, 1);
+        break;
+      }
+    }
+  }
+}
+
+/*
+  Initialize the interactive functionality of the page.
+*/
+function init() {
+    var i, j;
+
+    // Make collapse buttons clickable
+    var buttons = document.querySelectorAll('.collapse-button');
+    for (i = 0; i < buttons.length; i++) {
+        buttons[i].onclick = toggleCollapseButton;
+
+        // Show by default? Then toggle now.
+        if (buttons[i].className.indexOf('show') !== -1) {
+            toggleCollapseButton({target: buttons[i].children[0]});
+        }
+    }
+
+    var responseCodes = document.querySelectorAll('.example-names');
+    for (i = 0; i < responseCodes.length; i++) {
+        var tabButtons = childrenByClass(responseCodes[i], 'tab-button');
+        for (j = 0; j < tabButtons.length; j++) {
+            tabButtons[j].onclick = toggleTabButton;
+
+            // Show by default?
+            if (j === 0) {
+                toggleTabButton({target: tabButtons[j]});
+            }
+        }
+    }
+
+    // Make nav items clickable to collapse/expand their content.
+    var navItems = document.querySelectorAll('nav .resource-group .heading');
+    for (i = 0; i < navItems.length; i++) {
+        navItems[i].onclick = toggleCollapseNav;
+
+        // Show all by default
+        toggleCollapseNav({target: navItems[i].children[0]});
+    }
+}
+
+// Initial call to set up buttons
+init();
+
+window.onload = function () {
+    autoCollapse();
+    // Remove the `preload` class to enable animations
+    document.querySelector('body').className = '';
+};
+</script></body></html>
