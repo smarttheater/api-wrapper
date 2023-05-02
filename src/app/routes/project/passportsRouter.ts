@@ -1,11 +1,7 @@
 import * as express from 'express';
 import fetch from 'node-fetch';
-import {
-    BadRequestError,
-    ExceptionError,
-    PassportError,
-} from '../../models/error';
-import { body, validationResult } from 'express-validator';
+import { ExceptionError, PassportError } from '../../models/error';
+import { body } from 'express-validator';
 import { checkValidation } from '../../middlewares/validationHandler';
 
 const passportsRouter = express.Router();

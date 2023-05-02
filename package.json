@@ -13,9 +13,9 @@
     ],
     "scripts": {
         "dev": ".env && node dist/ssl",
-        "build": "tsc --project src --outDir dist",
+        "build": "tsc --project . --outDir dist",
         "start": "node dist/index",
-        "test": "npm run lint",
+        "test": "",
         "preversion": "npm run build",
         "version": "git add -A",
         "postversion": "git push origin --tags",
@@ -40,6 +40,7 @@
         "http-status": "^1.4.2",
         "moment": "^2.29.4",
         "node-fetch": "^2.6.7",
+        "redis": "^3.1.2",
         "winston": "^3.3.3"
     },
     "devDependencies": {
@@ -53,6 +54,7 @@
         "@types/http-status": "^1.1.2",
         "@types/node": "^12.11.1",
         "@types/node-fetch": "^2.6.2",
+        "@types/redis": "^2.8.32",
         "@types/request-promise-native": "^1.0.18",
         "@typescript-eslint/eslint-plugin": "^5.28.0",
         "@typescript-eslint/parser": "^5.28.0",

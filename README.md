@@ -11,6 +11,7 @@
 | `WAITER_SERVER_URL`                | true     |                               | waiter server url       |
 | `CLIENT_ID_TRANSACTION`            | true     |                               | client id               |
 | `CLIENT_ID_TRANSACTION_LOGIN`      | true     |                               | client id               |
+| `TOKEN_ISSUERS`                    | true     |                               | token issuers           |
 | `CLIENT_CREDENTIALS_CLIENT_ID`     | false    |                               | client id               |
 | `CLIENT_CREDENTIALS_CLIENT_SECRET` | false    |                               | client secret           |
 | `CLIENT_CREDENTIALS_DOMAIN`        | false    |                               | authorize server domain |

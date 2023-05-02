@@ -23,7 +23,7 @@ function setAuthentication(req, res, next) {
         try {
             yield (0, express_middleware_1.cognitoAuth)({
                 issuers: ISSUERS,
-                authorizedHandler: (user, token) => __awaiter(this, void 0, void 0, function* () {
+                authorizedHandler: (user, token) => {
                     req.user = user;
                     // リクエストに対してCinerino認証クライアントをセット
                     const auth = new cinerino.auth.ClientCredentials({
@@ -33,10 +33,11 @@ function setAuthentication(req, res, next) {
                         scopes: [],
                         state: '',
                     });
+                    // eslint-disable-next-line @typescript-eslint/naming-convention
                     auth.setCredentials({ access_token: token });
                     req.authClient = auth;
                     next();
-                }),
+                },
                 unauthorizedHandler: (err) => {
                     next(new error_1.UnauthorizedError(err.message));
                 },
